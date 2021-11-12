@@ -15,9 +15,12 @@ export const loadUser = () => async (dispatch) => {
   dispatch({ type: LOAD_USER_REQUEST });
   const config = {
     method: "GET",
+    mode: "no-cors",
   };
   await fetch(
-    `https://makbackend.herokuapp.com/api/v1/common/profile?token=${cookie.load("token")}`,
+    `https://makbackend.herokuapp.com/api/v1/common/profile?token=${cookie.load(
+      "token"
+    )}`,
     config
   )
     .then((response) => response.json())
@@ -46,10 +49,7 @@ export const logOut = () => async (dispatch) => {
   const config = {
     method: "GET",
   };
-  await fetch(
-    `/api/v1/common/logout?token=${cookie.load("token")}`,
-    config
-  )
+  await fetch(`/api/v1/common/logout?token=${cookie.load("token")}`, config)
     .then((response) => response.json())
     .then((data) => {
       cookie.remove("token");
