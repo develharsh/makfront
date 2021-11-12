@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy":"https://makbackend.herokuapp.com",
-  "homepage":"https://makfront.netlify.app",
+  "homepage":"https://makbackend.herokuapp.com",
   "dependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
